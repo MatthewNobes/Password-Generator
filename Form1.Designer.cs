@@ -33,10 +33,10 @@
             this.nudLength = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chbLowercase = new System.Windows.Forms.CheckBox();
-            this.chbUppercase = new System.Windows.Forms.CheckBox();
-            this.chbSymbols = new System.Windows.Forms.CheckBox();
             this.chbNumbers = new System.Windows.Forms.CheckBox();
+            this.chbSymbols = new System.Windows.Forms.CheckBox();
+            this.chbUppercase = new System.Windows.Forms.CheckBox();
+            this.chbLowercase = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudLength)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -94,29 +94,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
             // 
-            // chbLowercase
+            // chbNumbers
             // 
-            this.chbLowercase.AutoSize = true;
-            this.chbLowercase.Location = new System.Drawing.Point(10, 61);
-            this.chbLowercase.Name = "chbLowercase";
-            this.chbLowercase.Size = new System.Drawing.Size(112, 24);
-            this.chbLowercase.TabIndex = 4;
-            this.chbLowercase.Text = "Lowercase";
-            this.chbLowercase.UseVisualStyleBackColor = true;
-            // 
-            // chbUppercase
-            // 
-            this.chbUppercase.AutoSize = true;
-            this.chbUppercase.Location = new System.Drawing.Point(128, 61);
-            this.chbUppercase.Name = "chbUppercase";
-            this.chbUppercase.Size = new System.Drawing.Size(113, 24);
-            this.chbUppercase.TabIndex = 5;
-            this.chbUppercase.Text = "Uppercase";
-            this.chbUppercase.UseVisualStyleBackColor = true;
+            this.chbNumbers.AutoSize = true;
+            this.chbNumbers.Checked = true;
+            this.chbNumbers.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbNumbers.Location = new System.Drawing.Point(348, 61);
+            this.chbNumbers.Name = "chbNumbers";
+            this.chbNumbers.Size = new System.Drawing.Size(99, 24);
+            this.chbNumbers.TabIndex = 7;
+            this.chbNumbers.Text = "Numbers";
+            this.chbNumbers.UseVisualStyleBackColor = true;
             // 
             // chbSymbols
             // 
             this.chbSymbols.AutoSize = true;
+            this.chbSymbols.Checked = true;
+            this.chbSymbols.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbSymbols.Location = new System.Drawing.Point(247, 61);
             this.chbSymbols.Name = "chbSymbols";
             this.chbSymbols.Size = new System.Drawing.Size(95, 24);
@@ -124,15 +118,29 @@
             this.chbSymbols.Text = "Symbols";
             this.chbSymbols.UseVisualStyleBackColor = true;
             // 
-            // chbNumbers
+            // chbUppercase
             // 
-            this.chbNumbers.AutoSize = true;
-            this.chbNumbers.Location = new System.Drawing.Point(348, 61);
-            this.chbNumbers.Name = "chbNumbers";
-            this.chbNumbers.Size = new System.Drawing.Size(99, 24);
-            this.chbNumbers.TabIndex = 7;
-            this.chbNumbers.Text = "Numbers";
-            this.chbNumbers.UseVisualStyleBackColor = true;
+            this.chbUppercase.AutoSize = true;
+            this.chbUppercase.Checked = true;
+            this.chbUppercase.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbUppercase.Location = new System.Drawing.Point(128, 61);
+            this.chbUppercase.Name = "chbUppercase";
+            this.chbUppercase.Size = new System.Drawing.Size(113, 24);
+            this.chbUppercase.TabIndex = 5;
+            this.chbUppercase.Text = "Uppercase";
+            this.chbUppercase.UseVisualStyleBackColor = true;
+            // 
+            // chbLowercase
+            // 
+            this.chbLowercase.AutoSize = true;
+            this.chbLowercase.Checked = true;
+            this.chbLowercase.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbLowercase.Location = new System.Drawing.Point(10, 61);
+            this.chbLowercase.Name = "chbLowercase";
+            this.chbLowercase.Size = new System.Drawing.Size(112, 24);
+            this.chbLowercase.TabIndex = 4;
+            this.chbLowercase.Text = "Lowercase";
+            this.chbLowercase.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
