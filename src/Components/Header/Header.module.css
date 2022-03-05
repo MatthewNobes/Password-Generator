@@ -6,4 +6,6 @@
     align-items: center;
     justify-content: center;
     color: white;
-  }
+    padding-left: 5vw;
+    padding-right: 5vw;
+}

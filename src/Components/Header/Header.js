@@ -1,8 +1,11 @@
 import css from './Header.module.css'
+import { Typography } from '@mui/material';
 
 const Header = () => (
     <header className={css.Header}>
-        <h1>Password Generator</h1>
+        <Typography variant="h1" component="h1">
+                Password Generator
+        </Typography>
     </header>
 )
 
