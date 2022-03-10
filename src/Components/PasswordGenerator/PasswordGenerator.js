@@ -1,7 +1,6 @@
 import css from "./PasswordGenerator.module.css";
 import { generatePassword } from "./generatePassword";
 import { Button, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,7 +17,7 @@ const PasswordResult = (props) => {
   );
 };
 
-const CopyToClipboard = () => {
+const CopyToClipboardButton = () => {
   const password = useSelector((state) => state.password.password);
 
   return (
@@ -34,25 +33,33 @@ const CopyToClipboard = () => {
   );
 };
 
-const PasswordGenerator = () => {
+const GenerateNewPasswordButton = () => {
   const dispatch = useDispatch();
 
+  return (
+    <Button
+      variant="outlined"
+      onClick={() => {
+        dispatch(setPassword(generatePassword(12)));
+      }}
+      startIcon={<RefreshIcon />}
+    >
+      Generate New Password
+    </Button>
+  );
+};
+
+const PasswordGenerator = () => {
   return (
     <div className={css.PasswordGenerator}>
       <Typography variant="h2" component="h2">
         Recommended Password
       </Typography>
       <PasswordResult />
-      <CopyToClipboard />
-      <Button
-        variant="outlined"
-        onClick={() => {
-          dispatch(setPassword(generatePassword(12)));
-        }}
-        startIcon={<RefreshIcon />}
-      >
-        Generate New Password
-      </Button>
+      <div className={css.OptionsForm}>
+        <CopyToClipboardButton />
+        <GenerateNewPasswordButton />
+      </div>
     </div>
   );
 };
