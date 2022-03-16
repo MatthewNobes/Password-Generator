@@ -1,6 +1,8 @@
 {
   "name": "password-generator",
   "version": "0.1.0",
+  "author": "Matthew Nobes",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.8.1",
