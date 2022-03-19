@@ -2,7 +2,7 @@ import { CacheProvider, ThemeProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import css from "./App.module.css";
 import Header from "./Components/Header/Header";
-import PasswordGenerator from "./Components/PasswordGenerator/PasswordGenerator";
+import PasswordGenerator from "./Features/PasswordGenerator/PasswordGenerator";
 import { getTheme } from "./theme";
 
 const muiCache = createCache({
