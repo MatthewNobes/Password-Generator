@@ -19,6 +19,7 @@ const PasswordResult = () => {
   return (
     <div className={css.Result}>
       <OutlinedInput
+        aria-label="Generated password"
         disabled
         value={password}
         placeholder="Password"
@@ -45,6 +46,7 @@ const GenerateNewPasswordButton = () => {
 
   return (
     <Button
+      aria-label="Generate new password"
       variant="outlined"
       onClick={() => {
         dispatch(setPassword(generatePassword(12)));
