@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { generatePassword } from "../../Components/PasswordGenerator/generatePassword";
+import { generatePassword } from "../../Features/PasswordGenerator/generatePassword";
 
 const initialState = {
   password: generatePassword(12),
