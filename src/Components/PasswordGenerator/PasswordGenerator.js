@@ -1,35 +1,42 @@
 import css from "./PasswordGenerator.module.css";
 import { generatePassword } from "./generatePassword";
-import { Button, Typography } from "@mui/material";
+import {
+  Button,
+  Typography,
+  InputAdornment,
+  IconButton,
+  OutlinedInput,
+} from "@mui/material";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import { useDispatch, useSelector } from "react-redux";
 import { setPassword } from "../../Store/slices/passwordSlices";
 import { copyToClipboard } from "../../Utils/copyToClipboard";
 
-const PasswordResult = (props) => {
+const PasswordResult = () => {
   const password = useSelector((state) => state.password.password);
 
   return (
     <div className={css.Result}>
-      <Typography variant="body1">{password}</Typography>
+      <OutlinedInput
+        disabled
+        value={password}
+        placeholder="Password"
+        endAdornment={
+          <InputAdornment position="end">
+            <IconButton
+              aria-label="Copy password to clipboard"
+              onClick={() => {
+                copyToClipboard(password);
+              }}
+              edge="end"
+            >
+              <ContentCopyIcon />
+            </IconButton>
+          </InputAdornment>
+        }
+      />
     </div>
-  );
-};
-
-const CopyToClipboardButton = () => {
-  const password = useSelector((state) => state.password.password);
-
-  return (
-    <Button
-      variant="outlined"
-      onClick={() => {
-        copyToClipboard(password);
-      }}
-      startIcon={<ContentCopyIcon />}
-    >
-      Copy to clipboard
-    </Button>
   );
 };
 
@@ -57,7 +64,6 @@ const PasswordGenerator = () => {
       </Typography>
       <PasswordResult />
       <div className={css.OptionsForm}>
-        <CopyToClipboardButton />
         <GenerateNewPasswordButton />
       </div>
     </div>
