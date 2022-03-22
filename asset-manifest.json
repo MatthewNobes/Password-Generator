@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/risk-matrix-generator/static/css/main.88da2a30.css",
-    "main.js": "/risk-matrix-generator/static/js/main.d0fc17e8.js",
-    "static/js/787.7da6eb2c.chunk.js": "/risk-matrix-generator/static/js/787.7da6eb2c.chunk.js",
-    "index.html": "/risk-matrix-generator/index.html",
-    "main.88da2a30.css.map": "/risk-matrix-generator/static/css/main.88da2a30.css.map",
-    "main.d0fc17e8.js.map": "/risk-matrix-generator/static/js/main.d0fc17e8.js.map",
-    "787.7da6eb2c.chunk.js.map": "/risk-matrix-generator/static/js/787.7da6eb2c.chunk.js.map"
+    "main.css": "/PasswordGenerator/static/css/main.88da2a30.css",
+    "main.js": "/PasswordGenerator/static/js/main.6f78757b.js",
+    "static/js/787.7da6eb2c.chunk.js": "/PasswordGenerator/static/js/787.7da6eb2c.chunk.js",
+    "index.html": "/PasswordGenerator/index.html",
+    "main.88da2a30.css.map": "/PasswordGenerator/static/css/main.88da2a30.css.map",
+    "main.6f78757b.js.map": "/PasswordGenerator/static/js/main.6f78757b.js.map",
+    "787.7da6eb2c.chunk.js.map": "/PasswordGenerator/static/js/787.7da6eb2c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.88da2a30.css",
-    "static/js/main.d0fc17e8.js"
+    "static/js/main.6f78757b.js"
   ]
 }
