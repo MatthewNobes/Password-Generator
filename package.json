@@ -1,6 +1,7 @@
 {
   "name": "password-generator",
-  "version": "0.1.0",
+  "homepage": "https://matthewnobes.github.io/risk-matrix-generator/",
+  "version": "0.2.0",
   "author": "Matthew Nobes",
   "license": "MIT",
   "private": true,
