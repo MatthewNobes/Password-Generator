@@ -12,6 +12,7 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import { useDispatch, useSelector } from "react-redux";
 import { setPassword } from "../../Store/slices/passwordSlices";
 import { copyToClipboard } from "../../Utils/copyToClipboard";
+import PasswordGeneratorForm from "./PasswordGeneratorForm";
 
 const PasswordResult = () => {
   const password = useSelector((state) => state.password.password);
@@ -58,7 +59,7 @@ const GenerateNewPasswordButton = () => {
   );
 };
 
-const PasswordGenerator = () => {
+export const PasswordGenerator = () => {
   return (
     <div className={css.PasswordGenerator}>
       <Typography variant="h2" component="h2">
@@ -68,8 +69,7 @@ const PasswordGenerator = () => {
       <div className={css.OptionsForm}>
         <GenerateNewPasswordButton />
       </div>
+      <PasswordGeneratorForm />
     </div>
   );
 };
-
-export default PasswordGenerator;
