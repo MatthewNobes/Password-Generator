@@ -45,12 +45,16 @@ const PasswordResult = () => {
 const GenerateNewPasswordButton = () => {
   const dispatch = useDispatch();
 
+  const passwordLength = useSelector(
+    (state) => state.passwordLength.passwordLength
+  );
+
   return (
     <Button
       aria-label="Generate new password"
       variant="outlined"
       onClick={() => {
-        dispatch(setPassword(generatePassword(12)));
+        dispatch(setPassword(generatePassword(passwordLength)));
       }}
       startIcon={<RefreshIcon />}
     >
