@@ -4,9 +4,21 @@ import { setPasswordLength } from "../../../Store/slices/passwordLength/password
 
 export const PasswordGeneratorForm = () => {
   return (
-    <form>
+    <Box
+      sx={{
+        minWidth: "300px",
+        maxWidth: "500px",
+        width: "90%",
+        display: "flex",
+        justifyContent: "center",
+        marginY: 2,
+        gap: 2,
+        marginX: 2,
+        margin: "auto",
+      }}
+    >
       <PasswordLength />
-    </form>
+    </Box>
   );
 };
 
@@ -46,8 +58,8 @@ const PasswordLength = () => {
   return (
     <Box
       sx={{
-        minWidth: 300,
-        width: "40vw",
+        minWidth: "300px",
+        width: "100%",
         display: "flex",
         flexDirection: "column",
       }}

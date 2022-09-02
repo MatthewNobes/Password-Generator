@@ -1,8 +1,6 @@
-import css from "./PasswordGenerator.module.css";
 import { generatePassword } from "./generatePassword";
 import {
   Button,
-  Typography,
   InputAdornment,
   IconButton,
   OutlinedInput,
@@ -13,32 +11,32 @@ import { useDispatch, useSelector } from "react-redux";
 import { setPassword } from "../../Store/slices/passwordSlices";
 import { copyToClipboard } from "../../Utils/copyToClipboard";
 import PasswordGeneratorForm from "./PasswordGeneratorForm";
+import { Box } from "@mui/system";
 
 const PasswordResult = () => {
   const password = useSelector((state) => state.password.password);
 
   return (
-    <div className={css.Result}>
-      <OutlinedInput
-        aria-label="Generated password"
-        disabled
-        value={password}
-        placeholder="Password"
-        endAdornment={
-          <InputAdornment position="end">
-            <IconButton
-              aria-label="Copy password to clipboard"
-              onClick={() => {
-                copyToClipboard(password);
-              }}
-              edge="end"
-            >
-              <ContentCopyIcon />
-            </IconButton>
-          </InputAdornment>
-        }
-      />
-    </div>
+    <OutlinedInput
+      aria-label="Generated password"
+      disabled
+      sx={{ maxWidth: "500px", width: "100%" }}
+      value={password}
+      placeholder="Password"
+      endAdornment={
+        <InputAdornment position="end">
+          <IconButton
+            aria-label="Copy password to clipboard"
+            onClick={() => {
+              copyToClipboard(password);
+            }}
+            edge="end"
+          >
+            <ContentCopyIcon />
+          </IconButton>
+        </InputAdornment>
+      }
+    />
   );
 };
 
@@ -65,15 +63,25 @@ const GenerateNewPasswordButton = () => {
 
 export const PasswordGenerator = () => {
   return (
-    <div className={css.PasswordGenerator}>
-      <Typography variant="h2" component="h2">
-        Recommended Password
-      </Typography>
-      <PasswordResult />
-      <div className={css.OptionsForm}>
+    <>
+      <Box
+        sx={{
+          minWidth: "300px",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          marginY: 2,
+          marginX: 2,
+          gap: 2,
+        }}
+      >
+        <PasswordResult />
+
         <GenerateNewPasswordButton />
-      </div>
+      </Box>
+
       <PasswordGeneratorForm />
-    </div>
+    </>
   );
 };
