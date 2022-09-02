@@ -1,4 +1,3 @@
-import css from "./Header.module.css";
 import { Typography } from "@mui/material";
 
 const Header = () => (
