@@ -11,9 +11,6 @@
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.8",
     "@reduxjs/toolkit": "^1.8.0",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
     "pify": "^6.1.0",
     "pinkie-promise": "^2.0.1",
     "react": "^18.2.0",
@@ -49,6 +46,9 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3"
   }
 }
