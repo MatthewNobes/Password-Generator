@@ -54,6 +54,12 @@ This app has been setup with Docker. An image of this app can be created using t
 docker build . -t insert-name
 ```
 
+This script can also be executed using a built in npm command for this repo:
+
+```
+npm run docker
+```
+
 To load this Docker image into a container, the docker run command is used as follows with the name selected for the image in the previous step in place for insert-name.
 
 ```
