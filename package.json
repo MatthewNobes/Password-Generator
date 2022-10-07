@@ -1,7 +1,7 @@
 {
   "name": "password-generator",
   "homepage": "https://matthewnobes.github.io/Password-Generator/",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Matthew Nobes",
   "license": "MIT",
   "private": true,
