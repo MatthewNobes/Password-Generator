@@ -1,4 +1,5 @@
 import { Slider } from "@mui/material";
+import PropTypes from "prop-types";
 
 export const LengthSelector = (props) => {
 	const passwordLength = props.passwordLength;
@@ -46,4 +47,9 @@ export const LengthSelector = (props) => {
 			marks={marks}
 		/>
 	);
+};
+
+LengthSelector.propTypes = {
+	passwordLength: PropTypes.string.isRequired,
+	setLength: PropTypes.function.isRequired,
 };

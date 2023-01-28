@@ -6,23 +6,23 @@ import PasswordGenerator from "./Features/PasswordGenerator";
 import { getTheme } from "./theme";
 
 const muiCache = createCache({
-  key: "mui",
-  prepend: true,
+	key: "mui",
+	prepend: true,
 });
 
 const App = () => {
-  const theme = getTheme();
+	const theme = getTheme();
 
-  return (
-    <CacheProvider value={muiCache}>
-      <ThemeProvider theme={theme}>
-        <div className={css.App}>
-          <Header />
-          <PasswordGenerator />
-        </div>
-      </ThemeProvider>
-    </CacheProvider>
-  );
+	return (
+		<CacheProvider value={muiCache}>
+			<ThemeProvider theme={theme}>
+				<div className={css.App}>
+					<Header />
+					<PasswordGenerator />
+				</div>
+			</ThemeProvider>
+		</CacheProvider>
+	);
 };
 
 export default App;
