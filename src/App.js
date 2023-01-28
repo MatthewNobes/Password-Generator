@@ -1,8 +1,7 @@
 import { CacheProvider, ThemeProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import css from "./App.module.css";
-import Header from "./Components/Header/Header";
-import PasswordGenerator from "./Features/PasswordGenerator";
+import { Header, Router, Navigation } from "./Components";
 import { getTheme } from "./theme";
 
 const muiCache = createCache({
@@ -18,7 +17,8 @@ const App = () => {
 			<ThemeProvider theme={theme}>
 				<div className={css.App}>
 					<Header />
-					<PasswordGenerator />
+					<Router />
+					<Navigation />
 				</div>
 			</ThemeProvider>
 		</CacheProvider>

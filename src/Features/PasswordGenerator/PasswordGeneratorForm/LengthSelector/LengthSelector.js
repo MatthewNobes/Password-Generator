@@ -51,5 +51,5 @@ export const LengthSelector = (props) => {
 
 LengthSelector.propTypes = {
 	passwordLength: PropTypes.string.isRequired,
-	setLength: PropTypes.function.isRequired,
+	setLength: PropTypes.func.isRequired,
 };
