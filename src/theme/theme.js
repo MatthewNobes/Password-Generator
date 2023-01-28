@@ -5,7 +5,7 @@ export const getTheme = () => {
 		palette: {
 			primary: {
 				main: "#30323D",
-				dark: "#30323D",
+				dark: "#0e0f12",
 			},
 			secondary: {
 				main: "#5C80BC",
