@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-const Header = () => (
+export const Header = () => (
 	<header>
 		<Typography
 			aria-label="Header: Password Generator"
@@ -14,9 +14,7 @@ const Header = () => (
 				paddingY: 2,
 			}}
 		>
-      Password Generator
+			Password Generator
 		</Typography>
 	</header>
 );
-
-export default Header;
