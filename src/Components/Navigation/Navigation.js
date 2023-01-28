@@ -33,7 +33,7 @@ export const Navigation = () => {
 				/>
 				<BottomNavigationAction
 					component={Link}
-					to="/advice"
+					to="/tips"
 					label="Password tips"
 					icon={<Info />}
 				/>

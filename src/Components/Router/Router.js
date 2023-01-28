@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import PasswordGenerator from "../../Features/PasswordGenerator";
+import { PasswordGenerator, PinGenerator, PasswordTips } from "../../Features";
 
 export const Router = () => (
 	<Routes>
-		<Route path="/advice" element={<PasswordGenerator />} />
-		<Route path="/pin" element={<PasswordGenerator />} />
+		<Route path="/tips" element={<PasswordTips />} />
+		<Route path="/pin" element={<PinGenerator />} />
 		<Route path="/" element={<PasswordGenerator />} />
 	</Routes>
 );
