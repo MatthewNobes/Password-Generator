@@ -1,6 +1,14 @@
 import { generatePassword } from "./generatePassword";
+import crypto from "crypto";
 
 describe("Testing the expected outputs of generatePassword", () => {
+	Object.defineProperty(global.self, "crypto", {
+		value: {
+			subtle: crypto.webcrypto.subtle,
+			getRandomValues: crypto.randomFillSync,
+		},
+	});
+
 	it("Should output a 12 character long password when passed 12", () => {
 		const length = 12;
 		const password = generatePassword(length);

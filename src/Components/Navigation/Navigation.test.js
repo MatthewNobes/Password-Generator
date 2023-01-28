@@ -10,9 +10,8 @@ describe("Navigation", () => {
 			</BrowserRouter>,
 		);
 
-		const passwordLink = screen.getByText("Password");
-		console.log(passwordLink);
-		expect(passwordLink).toBeInTheDocument();
+		const linkLabel = screen.getByText("Password");
+		expect(linkLabel).toBeInTheDocument();
 
 		expect(screen.getByText("Password").closest("a")).toHaveAttribute(
 			"href",
@@ -27,8 +26,8 @@ describe("Navigation", () => {
 			</BrowserRouter>,
 		);
 
-		const pinLink = screen.getByText("Pin");
-		expect(pinLink).toBeInTheDocument();
+		const linkLabel = screen.getByText("Pin");
+		expect(linkLabel).toBeInTheDocument();
 
 		expect(screen.getByText("Pin").closest("a")).toHaveAttribute(
 			"href",
@@ -43,8 +42,8 @@ describe("Navigation", () => {
 			</BrowserRouter>,
 		);
 
-		const tipsLink = screen.getByText("Password tips");
-		expect(tipsLink).toBeInTheDocument();
+		const linkLabel = screen.getByText("Password tips");
+		expect(linkLabel).toBeInTheDocument();
 
 		expect(screen.getByText("Password tips").closest("a")).toHaveAttribute(
 			"href",
