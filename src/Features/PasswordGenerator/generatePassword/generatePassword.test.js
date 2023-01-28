@@ -4,7 +4,6 @@ import crypto from "crypto";
 describe("Testing the expected outputs of generatePassword", () => {
 	Object.defineProperty(global.self, "crypto", {
 		value: {
-			subtle: crypto.webcrypto.subtle,
 			getRandomValues: crypto.randomFillSync,
 		},
 	});
