@@ -1,17 +1,16 @@
-import { generatePassword } from "./generatePassword";
+import { generatePassword } from "./generatePassword/generatePassword";
 import {
 	Button,
 	InputAdornment,
 	IconButton,
 	OutlinedInput,
+	Box,
 } from "@mui/material";
-import RefreshIcon from "@mui/icons-material/Refresh";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import { Refresh, ContentCopy } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import { setPassword } from "../../Store/slices/passwordSlices";
-import { copyToClipboard } from "../../Utils/copyToClipboard";
+import { copyToClipboard } from "../../Utils/copyToClipboard/copyToClipboard";
 import PasswordGeneratorForm from "./PasswordGeneratorForm";
-import { Box } from "@mui/system";
 
 const PasswordResult = () => {
 	const password = useSelector((state) => state.password.password);
@@ -32,7 +31,7 @@ const PasswordResult = () => {
 						}}
 						edge="end"
 					>
-						<ContentCopyIcon />
+						<ContentCopy />
 					</IconButton>
 				</InputAdornment>
 			}
@@ -54,9 +53,9 @@ const GenerateNewPasswordButton = () => {
 			onClick={() => {
 				dispatch(setPassword(generatePassword(passwordLength)));
 			}}
-			startIcon={<RefreshIcon />}
+			startIcon={<Refresh />}
 		>
-      Generate New Password
+			Generate New Password
 		</Button>
 	);
 };
