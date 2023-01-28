@@ -1,6 +1,4 @@
-import Box from "@mui/material/Box";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import { Box, BottomNavigation, BottomNavigationAction } from "@mui/material";
 import { Dialpad, Info, Password } from "@mui/icons-material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
