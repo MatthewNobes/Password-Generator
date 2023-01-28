@@ -1,8 +1,8 @@
 import { CacheProvider, ThemeProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
-import css from "./App.module.css";
 import { Header, Router, Navigation } from "./Components";
 import { getTheme } from "./theme";
+import { Box } from "@mui/material";
 
 const muiCache = createCache({
 	key: "mui",
@@ -15,11 +15,11 @@ const App = () => {
 	return (
 		<CacheProvider value={muiCache}>
 			<ThemeProvider theme={theme}>
-				<div className={css.App}>
+				<Box>
 					<Header />
 					<Router />
 					<Navigation />
-				</div>
+				</Box>
 			</ThemeProvider>
 		</CacheProvider>
 	);
