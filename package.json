@@ -27,7 +27,8 @@
 		"deploy": "gh-pages -d build",
 		"docker": "docker build . -t password-generator",
 		"lint": "eslint --fix --ext .js,.jsx .",
-		"prettier": "prettier --check ."
+		"prettier": "prettier --check .",
+		"license-check": "license-checker --summary --production --excludePackages \"password-generator@1.1.1\" --onlyAllow \"MIT; Apache; BSD; CC-BY; CC0-1.0; MPL-2.0; Python-2.0; ISC; Unlicense\""
 	},
 	"eslintConfig": {
 		"extends": [
@@ -56,6 +57,7 @@
 		"crypto": "^1.0.1",
 		"eslint": "^8.32.0",
 		"gh-pages": "^4.0.0",
+		"license-checker": "^25.0.1",
 		"prettier": "^2.8.3",
 		"prop-types": "^15.8.1"
 	}
